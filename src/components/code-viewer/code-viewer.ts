@@ -1,5 +1,4 @@
-import { attr, observable } from "@microsoft/fast-element";
-import { FoundationElement } from "@microsoft/fast-foundation";
+import { attr, FASTElement, observable } from "@microsoft/fast-element";
 import { prettify } from "../../app/helpers/prettify.js";
 import { highlight } from "../../app/helpers/prism.js";
 
@@ -10,7 +9,7 @@ import { highlight } from "../../app/helpers/prism.js";
  *
  * @public
  */
-export class CodeViewer extends FoundationElement {
+export class CodeViewer extends FASTElement {
   /**
    * Reference to the internal code element.
    *

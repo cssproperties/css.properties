@@ -9,7 +9,7 @@ import { format } from "prettier/standalone.js";
  * @param options - The prettier options.
  * @returns  The prettified source code.
  */
-export function prettify(source: string, options: Options = {}) {
+export function prettify(source: string, options: Options = {}): string {
   return format(source, {
     parser: "css",
     plugins: [parserCSS],
