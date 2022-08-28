@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "moduleResolution": "Node16",
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "target": "ES2020",
+    "module": "ES2015",
+    "importHelpers": true,
+    "lib": ["DOM", "ES2015", "ES2021.String"]
+  },
+  "include": ["src"]
+}
