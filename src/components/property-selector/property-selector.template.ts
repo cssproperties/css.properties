@@ -9,7 +9,7 @@ import { PropertySelector } from "./property-selector.js";
 import { PropertySelectorOptions } from "./property-selector.options.js";
 
 /**
- * The template for the {@link @microsoft/fast-foundation#FASTDisclosure} component.
+ * The template for the PropertySelector component.
  * @public
  */
 export function propertySelectorTemplate<T extends PropertySelector>(
@@ -25,15 +25,11 @@ export function propertySelectorTemplate<T extends PropertySelector>(
                     aria-controls="disclosure-content"
                     aria-expanded="${x => x.expanded}"
                 >
-                    ${startSlotTemplate}
-                    <slot
-                        name="summary"
-                        ${slotted({
-                            property: "summarySlot",
-                        })}
+                    ${startSlotTemplate(options)}
+                    <slot name="summary" ${slotted({ property: "summarySlot" })}
                         >${x => x.summary}</slot
                     >
-                    ${endSlotTemplate}
+                    ${endSlotTemplate(options)}
                 </summary>
                 <div id="disclosure-content" part="disclosure-content">
                     <slot
