@@ -1,9 +1,5 @@
-import {
-  html,
-  ref,
-  slotted,
-  type ElementViewTemplate,
-} from "@microsoft/fast-element";
+import type { ElementViewTemplate, FASTElement } from "@microsoft/fast-element";
+import { html, ref, slotted } from "@microsoft/fast-element";
 import { type CodeViewer } from "./code-viewer.js";
 
 /**
@@ -13,11 +9,14 @@ import { type CodeViewer } from "./code-viewer.js";
  *
  * @public
  */
-export function codeViewerTemplate(): ElementViewTemplate<CodeViewer> {
-  return html<CodeViewer>`
-    <slot ${slotted({ property: "defaultSlot" })}></slot>
-    <pre class="${x => `language-${x.language}`}"><code ${ref(
-      "code"
-    )}></code></pre>
-  `;
+export function codeViewerTemplate<
+    T extends CodeViewer
+>(): ElementViewTemplate<T> {
+    return html<T>`
+        <slot ${slotted({ property: "defaultSlot" })}></slot>
+        <pre
+            class="${x => `language-${x.language}`}"
+            part="pre"
+        ><code part="code" ${ref("code")}></code></pre>
+    `;
 }

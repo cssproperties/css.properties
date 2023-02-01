@@ -1,14 +1,19 @@
 import { css } from "@microsoft/fast-element";
-import { display } from "@microsoft/fast-foundation";
-import prism from "prismjs/themes/prism-tomorrow.css";
+import prismTomorrowStyles from "prismjs/themes/prism-tomorrow.css";
 
 export const codeViewerStyles = css`
-  ${display("block")}
+    :host([hidden]) {
+        display: none;
+    }
 
-  ${prism}
+    :host {
+        display: block;
+    }
 
-  slot,
-  ::slotted(*) {
-    display: none;
-  }
+    slot,
+    ::slotted(*) {
+        display: none;
+    }
+
+    ${prismTomorrowStyles}
 `;
