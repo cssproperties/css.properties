@@ -1,14 +1,14 @@
 {
-  "tabWidth": 2,
-  "arrowParens": "avoid",
-  "overrides": [
-    {
-      "files": ["*.html"],
-      "options": {
-        "tabWidth": 4,
-        "useTabs": true,
-        "embeddedLanguageFormatting": "auto"
-      }
-    }
-  ]
+    "tabWidth": 4,
+    "arrowParens": "avoid",
+    "overrides": [
+        {
+            "files": ["*.html"],
+            "options": {
+                "tabWidth": 4,
+                "useTabs": true,
+                "embeddedLanguageFormatting": "auto"
+            }
+        }
+    ]
 }

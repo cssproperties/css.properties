@@ -10,9 +10,9 @@ import { highlight as PrismHighlight, languages } from "prismjs";
  * @public
  */
 export function highlight(code: string, lang: string): string {
-  if (lang && languages[lang]) {
-    return PrismHighlight(code, languages[lang], lang);
-  }
+    if (lang && languages[lang]) {
+        return PrismHighlight(code, languages[lang], lang);
+    }
 
-  return "";
+    return "";
 }

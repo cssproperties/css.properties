@@ -10,9 +10,9 @@ import { format } from "prettier/standalone.js";
  * @returns  The prettified source code.
  */
 export function prettify(source: string, options: Options = {}): string {
-  return format(source, {
-    parser: "css",
-    plugins: [parserCSS],
-    ...options,
-  });
+    return format(source, {
+        parser: "css",
+        plugins: [parserCSS],
+        ...options,
+    });
 }
