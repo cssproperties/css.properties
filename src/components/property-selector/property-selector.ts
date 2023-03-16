@@ -1,4 +1,4 @@
-import { observable } from "@microsoft/fast-element";
+import { attr, observable } from "@microsoft/fast-element";
 import { FASTDisclosure } from "@microsoft/fast-foundation";
 
 /**
@@ -24,4 +24,7 @@ export class PropertySelector extends FASTDisclosure {
      */
     @observable
     public defaultSlot: Node[];
+
+    @attr({ attribute: "open", mode: "boolean" })
+    public open: boolean = false;
 }

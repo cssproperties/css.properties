@@ -6,10 +6,8 @@ export const propertySelectorStyles = css`
         position: relative;
     }
 
-    [part=disclosure-content] {
-        background: #FFF;
+    [part="disclosure-content"] {
+        background: #f6f4ef;
         position: absolute;
     }
-
-
 `;

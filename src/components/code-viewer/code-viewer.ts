@@ -4,7 +4,7 @@ import { highlight, prettify } from "../../app/index.js";
 /**
  * A code viewer component.
  *
- *  @extends FoundationElement
+ *  @extends FASTElement
  *
  * @public
  */

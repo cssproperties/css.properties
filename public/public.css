@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    align-items: start;
+    grid-template-columns: auto 1fr;
+}
+
+.site-heading {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.site-heading-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.main-heading {
+    color: #044f85;
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+.site-heading::after {
+    content: "/";
+    margin-inline: 0.5ch;
+    font-weight: 400;
+}

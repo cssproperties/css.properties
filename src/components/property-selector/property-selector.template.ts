@@ -17,7 +17,7 @@ export function propertySelectorTemplate<T extends PropertySelector>(
 ): ElementViewTemplate<T> {
     return html<T>`
         <template>
-            <details part="details" ${ref("details")}>
+            <details part="details" ${ref("details")} ?open="${x => x.open}">
                 <summary
                     class="invoker summary"
                     part="summary"
